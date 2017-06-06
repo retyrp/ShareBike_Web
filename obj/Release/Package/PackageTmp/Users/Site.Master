@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ShareBike_Web.Users.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/Style.css" />
+    <link rel="stylesheet" href="../css/font.css"/>
+    <link rel="stylesheet" href="../css/site.min.css" />
+    <link rel="stylesheet" href="../css/web-icons.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/font_web_icon.css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="mainpage site-menubar-unfold layout-fulls  site-menubar-hide" data-menu-position="closed">
+    <div class="jPanelMenu-panel" style="position: relative; left: 0px;">
+        <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left unfolded hided" id="barmenu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-center site-gridmenu-toggle">
+                    <a href="/index.php" role="menuitem" style="color: #fff;">
+                        <img class="navbar-brand-logo" src="../images/logo.png" title="共享单车">
+                        <span class="navbar-brand-text">共享单车</span></a>
+                </div>
+            </div>
+            <div class="navbar-container container-fluid">
+                <div class="navbar-collapse navbar-collapse-toolbar collapse in" id="site-navbar-collapse">
+                    <asp:label runat="server" ID="username_label"></asp:label>
+                </div>
+            </div>
+        </nav>
+        <div class="site-menubar">
+            <div class="site-menubar-body">
+                <div>
+                    <div>
+                        <ul class="site-menu">
+                            <li class="site-menu-item has-sub active">
+                                <a href="User.aspx">
+                                    <i class="site-menu-icon wb-grid-9"></i>
+                                    <span class="site-menu-title">客户中心</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item has-sub ">                          
+                                    <i class="site-menu-icon wb-layout"></i>
+                                    <span class="site-menu-title">个人中心</span>
+                                    <span class="site-menu-arrow"></span>
+                                <ul class="site-menu-sub" style="display:none">
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="User_info.aspx">
+                                            <i class="site-menu-icon "></i>
+                                            <span class="site-menu-title">个人资料</span>
+                                        </a>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="User_share_log.aspx">
+                                            <i class="site-menu-icon"></i>
+                                            <span class="site-menu-title">共享记录</span>
+                                        </a>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="User_confirm.aspx">
+                                            <i class="site-menu-icon "></i>
+                                            <span class="site-menu-title">用户认证</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="site-menu-item has-sub ">
+                                    <i class="site-menu-icon wb-payment"></i>
+                                    <span class="site-menu-title">消费中心</span>
+                                    <span class="site-menu-arrow"></span>
+                                <ul class="site-menu-sub" style="display:none">
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="Log.aspx">
+                                            <i class="site-menu-icon "></i>
+                                            <span class="site-menu-title">我的账单</span>
+                                        </a>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="User_share_log.aspx">
+                                            <i class="site-menu-icon " aria-hidden="true"></i>
+                                            <span class="site-menu-title">消费记录查询</span>
+                                        </a>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="User_pay.aspx">
+                                            <i class="site-menu-icon "></i>
+                                            <span class="site-menu-title">账户充值</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="site-menu-item has-sub ">
+                                    <i class="site-menu-icon wb-user" aria-hidden="true"></i>
+                                    <span class="site-menu-title">服务中心</span>
+                                    <span class="site-menu-arrow"></span>
+                                </a>
+                                <ul class="site-menu-sub" style="display:none">
+                                    <li class="site-menu-item">
+                                        <asp:label runat="server" ID="link1" Text="" Visible="false"/>
+                                        <asp:HyperLink ID="HyperLink6" runat="server"><i class="site-menu-icon " aria-hidden="true"></i>
+                                            <span class="site-menu-title">帮助建议</span></asp:HyperLink>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <asp:HyperLink ID="HyperLink1" runat="server"><i class="site-menu-icon " aria-hidden="true"></i>
+                                            <span class="site-menu-title">人工服务</span></asp:HyperLink>
+                                        
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="User_Pwd.aspx">
+                                            <i class="site-menu-icon " aria-hidden="true"></i>
+                                            <span class="site-menu-title">修改密码</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="site-menu-item has-sub ">
+                                <asp:HyperLink ID="HyperLink5" runat="server"><i class="site-menu-icon " aria-hidden="true"></i>
+                                            <span class="site-menu-title">公告信息</span></asp:HyperLink>
+                            </li>
+                            <li class="site-menu-item has-sub ">
+                                <a href="WebForm1.aspx">
+                                    <i class="site-menu-icon wb-globe"></i>
+                                    <span class="site-menu-title">单车预约</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="site-menubar-footer">
+                <a href="User_info.aspx" class="fold-show" data-placement="top" data-toggle="tooltip" data-original-title="我的资料">
+                    <span class="icon wb-settings" aria-hidden="true"></span>
+                </a>
+                <a href="User_pay" data-placement="top" data-toggle="tooltip" data-original-title="快速充值">
+                    <span class="icon wb-eye-close" aria-hidden="true"></span>
+                </a>
+                <a href="logout.aspx" data-placement="top" data-toggle="tooltip" data-original-title="退出账户">
+                    <span class="icon wb-power" aria-hidden="true"></span>                   
+                </a>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <div class="sitemap">
+                <ul>
+                    <li class="title">快速导航</li>
+                    <li><asp:HyperLink ID="HyperLink7" runat="server">服务条款</asp:HyperLink></li>
+                    <li><a href="#">支付方式</a></li>
+                    <li><a href="#">推广联系</a></li>
+                </ul>
+                <ul>
+                    <li class="title">帮助与支持</li>
+                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="#"><i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">帮助中心</span></asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="#"><i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">使用贴士</span></asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="#"><i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">常用服务</span></asp:HyperLink></li>
+                </ul>
+                <ul class="products">
+                    <li class="title">联系我们</li>
+                    <li><label>邮箱支持: bike@gmail.com</label></li>
+                    <li><label>电话支持: 00000000000</label></li>
+                    <li><label>欢迎您的咨询和使用</label></li>
+                </ul>
+            </div>
+            <div class="made-by">
+                <div class="container">
+                    <div class="address">©2017 Share Bike All rights reserved. </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/Jpanel.js"></script>
+
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/whmcs.js"></script>
+    <style id="jPanelMenu-style-master">@media only screen and (max-width: 767px) { body{width:100%}.jPanelMenu,body{overflow-x:hidden}#jPanelMenu-menu{display:block;position:fixed;top:0;left:0;height:100%;z-index:-1;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch}.jPanelMenu-panel{position:static;left:0;top:0;z-index:2;width:100%;min-height:100%;background:rgb(255, 255, 255)}}</style>
+</body>
+</html>
+

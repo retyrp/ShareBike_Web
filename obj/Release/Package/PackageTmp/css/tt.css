@@ -1,0 +1,78 @@
+﻿body 
+{
+    text-align:center;
+    min-width:420px;
+}
+
+
+.title
+{
+    text-align:left;
+    width:120px;
+    font-size:24px;
+}
+
+caption
+{
+    font-size:32px;
+    font-weight:bold;
+    text-shadow:1px;
+}
+
+.text
+{
+    text-align:left;
+    width:240px;
+}
+.inputbox
+{
+    height:28px;
+    width:180px;
+    font-size:12px;   
+    padding-left:4px;
+ }
+ 
+ .btn_btn
+ {
+     text-align:center;
+ }
+ 
+ footer
+{
+    box-sizing:border-box;
+    height:80px;
+    font-family:微软雅黑;
+    font-size:12pt;
+    padding-top:8px;
+}  
+ 
+ #user
+{
+    box-sizing:border-box;
+    min-height:200px;
+    max-width:320px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:4px;
+    padding-top:18px;
+    border:2px solid dark;
+}
+
+header
+{
+    font-size:42px;
+    font-color:blue;
+    box-sizing:border-box;
+    text-align:left;
+    height:128px;
+    padding-top:60px;
+    padding-left:4px;
+}
+#main
+{
+    
+    box-sizing:border-box;
+    min-height:320px;
+    width:100%;
+    background-color: #EAEAEA;
+}
